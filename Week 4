@@ -1,0 +1,270 @@
+<html>
+ <head>
+
+   <script>
+     
+     function changeBg(colortouse){
+       document.body.style.backgroundColor = colortouse       
+        }
+     
+   </script>
+   
+   <script>
+     function startQ2(){
+     var numberEntered = prompt("Enter the number you wish to multiply") ;
+     var numberOfMultiplications = prompt("Enter the number you wish to multiply by");
+       
+     for ( var i = 0; i < parseInt(numberOfMultiplications)+1; i++ ) {
+ document.write(numberEntered 
+                + " multiplied by " 
+                + i 
+                + " = " + parseInt(numberEntered)*i 
+                + "</br>"); } 
+     }
+   
+  
+     
+     function startQ3(){
+     
+       
+       var numberEntered = prompt("Enter the number you wish to multiply") ;
+    
+      if (numberEntered === "quit")
+          {return false}
+        else
+			{
+            var numberOfMultiplications = prompt("Enter the number you wish to multiply by");
+            if (numberOfMultiplications === "quit")
+				{return false}
+			else
+				{ 
+					var results="<p>";
+					for ( var i = 0; i < parseInt(numberOfMultiplications)+1; i++ ) {
+					results += " " + numberEntered + " multiplied by " + i + " = " + parseInt(numberEntered)*i + "</br>" ;
+					var resultEl = document.getElementById("Q3Result");
+					resultEl.innerHTML = results; 
+					}
+					startQ3()
+				} 
+			}
+   }  
+
+   function startQ4(){
+     
+       var allLinks = document.querySelectorAll('a[href]');
+	   var allLinksLen = allLinks.length; 
+	   
+	   Q4Results= "<table>";
+	   for ( var i = 0; i < parseInt(allLinksLen)+1; i++ ){
+	
+		Q4Results+=" <tr><td>"+i+"</td><td>"+ document.querySelectorAll('a[href]')[i] +"</td><td>"+document.querySelectorAll('a[href]')[i] +"</td></tr>"
+	   }
+	  
+	   
+	  // alert(allLinksLen) ;
+	   var resultEl = document.getElementById("Q4Result");
+		resultEl.innerHTML = Q4Results; 
+	 
+	   //alert(allLinksText.length) ;
+   }
+   </script>
+   
+ </head>
+ <body>
+<hr>
+   <h2>Q1</h2>
+   <p>Write a small web page that contains some basic text. Include JavaScript code that displays two buttons. You can include a button using the following HTML:</p>
+<!--<button value="The Button Label"/>-->
+<p>Each button's label should be the name of a colour. When the user clicks on a button, change the page background to that colour. (Hint: The property is document.bgcolor.)</p>
+   <p>this is some basic text</p>
+   <button onclick="changeBg('Blue')" type="button">Blue</button>
+   <button onclick="changeBg('Red')" type="button">Red</button>
+    <button onclick="changeBg('White')" type="button">White</button>
+   
+   <hr>
+   <h2>Q2</h2>
+   <p>Write a small web page including JavaScript that:</p>
+<ul>
+<li>Prompts the user (using prompt()) to enter a number</li>
+<li>Displays the multiplication table for that number in the page, with a suitable heading</li>
+</ul>
+
+   <button onclick="startQ2()" type="button">Start Q2</button>
+   
+    <hr>
+   <h2>Q3</h2>
+   <p>Can you extend your answer to the previous question, so that after a multiplication table has been shown, the process is repeated.</p>
+<p>In each case replace the previously shown table with the newly generated one. Terminate when the user enters a suitable word, like "quit".</p>
+   <button onclick="startQ3()" type="button">Start Q3</button>
+   
+   <div id="Q3Result"></div>
+   
+    <hr>
+   <h2>Q4</h2>
+   <p>Write a small web page that contains, in its content, a number of links to other pages.</p>
+<p>Include a button with a label "Summarise links". When the user clicks this button, you should display in the page a table showing a summary of all the links, including</p>
+
+<ul>
+<li>the URL (href) that is linked to</li>
+<li>the text from the element that describes the link</li>
+</ul>
+   <button onclick="startQ4()" type="button">Start Q4</button>
+   
+   <div id="Q4Result"></div>
+   
+   <div id="ListofLinks" style="display:none;">
+   
+   
+   <div id="main-content">
+
+      <a name="top"> </a>
+      <h1>Interesting links</h1>
+
+      <br>
+
+      <p>Here’s just a small list of some of the sites I find interesting, useful or both. As you’d expect I couldn’t include everything so I’ll update this list from time to time.</p>
+
+      <div class="bold-button" style="float: right; width: 180px; margin: 25px 10px 20px 10px;">
+        <a href="http://toptrends.nowandnext.com/">
+          <span class="small">Visit the</span><br>
+          <span class="large">Top Trends Blog</span><br>
+        </a>
+      </div>
+
+      <p>
+      <a href="#futurist">Futurist and trend sites</a><br>
+      <a href="#scenario">Scenario planning sites</a><br>
+      <a href="#innovation">Innovation sites</a><br>
+      <a href="#events">Events and discussion forums</a><br>
+      <a href="#other">Other interesting sites</a><br>
+      <a href="#media">Interesting media</a><br>
+      </p>
+
+      <p>Also take a look at what I’m reading and what’s taking up space on my <a href="/?action=misc&amp;subaction=books">bookshelf</a>, and don't forget my <a href="http://brainmail.nowandnext.com/">brainmail</a> newsletter.</p>
+
+
+      <a name="futurist"> </a>
+      <h2>Futurist and trend sites</h2>
+      <p>
+      <a href="http://www.cifs.dk/">http://www.cifs.dk</a><br>
+      <a href="http://www.corante.com/">http://www.corante.com</a><br>
+      <a href="http://www.davidreport.com/">http://www.davidreport.com</a><br>
+      <a href="http://www.davinciinstitute.com/">http://www.davinciinstitute.com</a><br>
+      <a href="http://www.doorsofperception.com">http://www.doorsofperception.com</a><br>
+      <a href="http://www.european-futurists.org/">http://www.european-futurists.org</a><br>
+      <a href="http://www.futurefeeder.com">http://www.futurefeeder.com</a><br>
+      <a href="http://www.futurefoundation.net/">http://www.futurefoundation.net</a><br>
+      <a href="http://www.futuresfoundation.org.au/">http://www.futuresfoundation.org.au</a><br>
+      <a href="http://futurewire.blogspot.com/">http://futurewire.blogspot.com</a><br>
+      <a href="http://www.iftf.org/">http://www.iftf.org</a><br>
+      <a href="http://www.plausiblefutures.com/">http://www.plausiblefutures.com</a><br>
+      <a href="http://www.psfk.com/">http://www.psfk.com</a><br>
+      <a href="http://www.rahs.org.sg/">http://www.rahs.org.sg</a><br>
+      <a href="http://www.shapingtomorrow.com/">http://www.shapingtomorrow.com</a><br>
+      <a href="http://www.socialtechnologies.com/">http://www.socialtechnologies.com</a><br>
+      <a href="http://www.springwise.com/">http://www.springwise.com</a><br>
+      <a href="http://www.trendbuero.de/">http://www.trendbuero.de</a><br>
+      <a href="http://www.trendcentral.com/">http://www.trendcentral.com</a><br>
+      <a href="http://www.trendwatching.com/">http://www.trendwatching.com</a><br>
+      <a href="http://www.tse.fi/">http://www.tse.fi</a><br>
+      <a href="http://www.wfs.org">http://www.wfs.org</a><br>   
+      <a href="http://www.williamsinference.com/">http://www.williamsinference.com</a><br>
+      </p>
+
+      <a name="scenario"> </a>
+      <h2>Scenario planning sites</h2>
+      <p>
+      <a href="http://www.futureshouse.eu/">http://www.futureshouse.eu</a><br>
+      <a href="http://www.futureexploration.net">http://www.futureexploration.net</a><br>
+      <a href="http://www.futureshouse.com">http://www.futureshouse.com</a><br>     
+      <a href="http://www.outsights.co.uk">http://www.outsights.co.uk</a><br>
+      </p>
+
+      <a name="innovation"> </a>
+      <h2>Innovation sites</h2>
+      <p>
+      <a href="http://www.imaginatik.com">http://www.imaginatik.com</a><br>
+      <a href="http://www.innovationwatch.com">http://www.innovationwatch.com</a><br>
+      <a href="http://www.innovic.com.au/">http://www.innovic.com.au</a><br>
+      <a href="http://www.whatifinnovation.com">http://www.whatifinnovation.com</a><br>
+      <a href="http://www.zerogravitythinker.com">http://www.zerogravitythinker.com</a><br>
+      </p>
+
+      <a name="events"> </a>
+      <h2>Events and discussion forums</h2>
+      <p>
+      <a href="http://www.innotown.com/">http://www.innotown.com</a><br>
+      <a href="http://www.intelligencesquared.com/">http://www.intelligencesquared.com</a><br>      
+      <a href="http://www.instituteofideas.com/">http://www.instituteofideas.com</a><br>
+      <a href="http://www.forum-21.com/">http://www.forum-21.com</a><br>
+      <a href="http://www.nightwithafuturist.com/">http://www.nightwithafuturist.com</a><br>      
+      <a href="http://www.parc.com/">http://www.parc.com</a><br>      
+      <a href="http://www.rsa.org.uk/">http://www.rsa.org.uk</a><br>      
+      <a href="http://www.sydneytalks.com.au">http://www.sydneytalks.com.au</a><br>
+      <a href="http://www.ted.com/">http://www.ted.com</a><br>
+      </p>
+
+      <a name="other"> </a>
+      <h2>Other interesting sites</h2>
+      <p>
+      <a href="http://www.austhink.org/">http://www.austhink.org/</a><br>      
+      <a href="http://www.blogpulse.com/">http://www.blogpulse.com</a><br>
+      <a href="http://www.extendlimits.nl/">http://www.extendlimits.nl</a><br>
+      <a href="http://www.eurasiagroup.net/">http://www.eurasiagroup.net</a><br>
+      <a href="http://www.goldmansachs.com/ideas/">http://www.goldmansachs.com/ideas</a><br>
+      <a href="http://www.pfcenergy.com/">http://www.pfcenergy.com</a><br>
+      <a href="http://www.squidoo.com/">http://www.squidoo.com</a><br>
+      <a href="http://eurasiagroup.net/">http://eurasiagroup.net</a><br>
+      <a href="http://www.chathamhouse.org/">http://www.chathamhouse.org</a><br>
+      <a href="http://www.mckinsey.com/insights/mgi.aspx">http://www.mckinsey.com/insights/mgi.aspx</a><br>
+      </p>
+
+      <a name="media"> </a>
+      <h2>Interesting media</h2>
+      <p>The list is almost endless but here are a few key ones...</p>
+      <p>
+      <a href="http://www.aldaily.com/">http://www.aldaily.com/</a><br>
+      <a href="http://www.theatlantic.com/">http://www.theatlantic.com</a><br>
+      <a href="http://www.bbc.co.uk/">http://www.bbc.co.uk</a><br>
+      <a href="http://www.economist.com/">http://www.economist.com</a><br>
+      <a href="http://ads.economist.com/intelligent-life/introduction/">http://ads.economist.com/intelligent-life/introduction/</a><br>
+      <a href="http://www.fastcompany.com/">http://www.fastcompany.com</a><br>
+      <a href="http://www.ft.com/">http://www.ft.com</a><br>
+      <a href="http://www.guardian.co.uk/">http://www.guardian.co.uk</a><br>
+      <a href="http://www.harpers.org/">http://www.harpers.org</a><br>
+      <a href="http://www.hbr.org/">http://www.hbr.org</a><br>
+      <a href="http://www.homepagedaily.com/">http://www.homepagedaily.com</a><br>
+      <a href="http://mckinseyquarterly.com/">http://mckinseyquarterly.com</a><br>
+      <a href="http://money.cnn.com/magazines/business2/">http://money.cnn.com/magazines/business2/</a><br>
+      <a href="http://www.newscientist.com/">http://www.newscientist.com</a><br>
+      <a href="http://www.newyorker.com/">http://www.newyorker.com</a><br>
+      <a href="http://www.nni.nikkei.co.jp/">http://www.nni.nikkei.co.jp</a><br>
+      <a href="http://www.nytimes.com/">http://www.nytimes.com</a><br>
+      <a href="http://www.observer.co.uk/">http://www.observer.co.uk</a><br>
+      <a href="http://www.prospectmagazine.co.uk/">http://www.prospectmagazine.co.uk</a><br>
+      <a href="http://radar.oreilly.com/">http://radar.oreilly.com</a><br>
+      <a href="http://www.redherring.com/">http://www.redherring.com</a><br>
+      <a href="http://www.salon.com/">http://www.salon.com</a><br>
+      <a href="http://www.sciencedaily.com/">http://www.sciencedaily.com</a><br>
+      <a href="http://www.slate.com/">http://www.slate.com</a><br>
+      <a href="http://www.spiked-online.com">http://www.spiked-online.com</a><br>
+      <a href="http://www.thenation.com/">http://www.thenation.com</a><br>
+      <a href="http://www.strategy-business.com/">http://www.strategy-business.com</a><br>
+      <a href="http://www.techreview.com/">http://www.techreview.com</a><br>
+      <a href="http://www.washingtonpost.com/">http://www.washingtonpost.com</a><br>
+      <a href="http://www.wired.com/">http://www.wired.com</a><br>
+      <a href="http://www.aeonmagazine.com/">http://www.aeonmagazine.com</a><br>
+      <a href="http://www.dgquarterly.com/">http://www.dgquarterly.com</a><br>
+      <a href="http://www.arcfinity.org/">http://www.arcfinity.org</a><br>
+      
+      </p>
+
+      <p class="faqTopLink"><a href="#top">Top of page</a></p>
+
+
+    </div>
+   
+   
+   </div>
+</body>
+</html> 
